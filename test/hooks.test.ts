@@ -22,6 +22,7 @@ describe('useLocalStorage', () => {
   it('updates stored value and localStorage when setValue is called', () => {
     const { result } = renderHook(() => useLocalStorage('anotherKey', 'default'));
     act(() => {
+      // @ts-ignore
       result.current[1]('newValue');
     })
     expect(result.current[0]).toBe('newValue');
