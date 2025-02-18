@@ -8,7 +8,7 @@ import { useState } from 'react';
  * @param initialValue The initial value to use if the key is not found in local storage
  * @returns The stored value and a function to update it
  */
-export function useLocalStorage<T>(key: string, initialValue: T) {
+export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => void] {
   if (!key) {
     throw new Error('useLocalStorage key may not be falsy');
   }

@@ -1,11 +1,12 @@
 {
   "name": "efhlib",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React hooks and stuff",
   "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "build:clean" : "rm -rf dist && tsc"
   },
   "repository": {
     "type": "git",
